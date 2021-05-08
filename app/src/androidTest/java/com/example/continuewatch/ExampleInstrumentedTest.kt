@@ -1,6 +1,6 @@
 package com.example.continuewatch
 
-import android.content.pm.ActivityInfo
+
 import android.os.SystemClock
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.assertion.ViewAssertions
@@ -12,8 +12,6 @@ import androidx.test.uiautomator.UiDevice
 
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 import org.junit.Rule
 
 /**
@@ -49,17 +47,17 @@ class ContinueWatchTest {
 //            .check(ViewAssertions.matches(ViewMatchers.withText("2")))
 //    }
 
-    @Test
-    fun correctCountBlockScreen() {
-        val uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val scenario = rule.scenario
-        SystemClock.sleep(2000)
-        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-        uiDevice.sleep()
-        SystemClock.sleep(2000)
-        uiDevice.wakeUp()
-        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-    }
+//    @Test
+//    fun correctCountBlockScreen() {
+//        val uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+//        val scenario = rule.scenario
+//        SystemClock.sleep(2000)
+//        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+//            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
+//        uiDevice.sleep()
+//        SystemClock.sleep(2000)
+//        uiDevice.wakeUp()
+//        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+//            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
+//    }
 }

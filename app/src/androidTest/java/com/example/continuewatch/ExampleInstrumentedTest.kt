@@ -24,41 +24,40 @@ class ContinueWatchTest {
     @get:Rule
     val rule = activityScenarioRule<MainActivity>()
 
+    @Test
+    fun correctCount() {
+        SystemClock.sleep(2000)
+        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
+        SystemClock.sleep(1000)
+        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+            .check(ViewAssertions.matches(ViewMatchers.withText("2")))
+    }
+
+    @Test
+    fun correctCountOrientation() {
+        val uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
+        SystemClock.sleep(2000)
+        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
+        uiDevice.setOrientationLeft()
+        SystemClock.sleep(2000)
+        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
+            .check(ViewAssertions.matches(ViewMatchers.withText("2")))
+    }
+
+    //зависает на эмуляторе
 //    @Test
-//    fun correctCount() {
-//        val scenario = rule.scenario
-//        SystemClock.sleep(2000)
-//        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-//            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-//        SystemClock.sleep(1000)
-//        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-//            .check(ViewAssertions.matches(ViewMatchers.withText("2")))
-//    }
-//
-//    @Test
-//    fun correctCountOrientation() {
+//    fun correctCountBlockScreen() {
 //        val uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
 //        val scenario = rule.scenario
 //        SystemClock.sleep(2000)
 //        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
 //            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-//        uiDevice.setOrientationLeft()
+//        uiDevice.sleep()
 //        SystemClock.sleep(2000)
+//        uiDevice.wakeUp()
 //        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-//            .check(ViewAssertions.matches(ViewMatchers.withText("2")))
+//            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
 //    }
-
-    @Test
-    fun correctCountBlockScreen() {
-        val uiDevice = UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
-        val scenario = rule.scenario
-        SystemClock.sleep(2000)
-        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-        uiDevice.sleep()
-        SystemClock.sleep(2000)
-        uiDevice.wakeUp()
-        Espresso.onView(ViewMatchers.withId(R.id.textSecondsElapsed))
-            .check(ViewAssertions.matches(ViewMatchers.withText("1")))
-    }
 }

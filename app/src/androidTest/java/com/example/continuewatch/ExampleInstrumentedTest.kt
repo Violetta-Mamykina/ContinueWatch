@@ -21,8 +21,6 @@ import org.junit.Rule
  */
 @RunWith(AndroidJUnit4::class)
 class ContinueWatchTest {
-    @get:Rule
-    val rule = activityScenarioRule<MainActivity>()
 
     @Test
     fun correctCount() {

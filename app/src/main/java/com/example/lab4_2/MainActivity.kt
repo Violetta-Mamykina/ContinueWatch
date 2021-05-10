@@ -1,11 +1,11 @@
 package com.example.lab4_2
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import androidx.recyclerview.widget.LinearLayoutManager
-//import androidx.recyclerview.widget.RecyclerView
-//import name.ank.lab4.BibDatabase
-//
-//
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import name.ank.lab4.BibDatabase
+
+//бесконечный
 //class MainActivity : AppCompatActivity() {
 //
 //    private lateinit var recyclerView: RecyclerView
@@ -28,14 +28,14 @@ package com.example.lab4_2
 //    }
 //}
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import name.ank.lab4.BibDatabase
-import name.ank.lab4.BibEntry
-
+//import androidx.appcompat.app.AppCompatActivity
+//import android.os.Bundle
+//import android.util.Log
+//import androidx.recyclerview.widget.LinearLayoutManager
+//import androidx.recyclerview.widget.RecyclerView
+//import name.ank.lab4.BibDatabase
+//import name.ank.lab4.BibEntry
+//
 //class MainActivity : AppCompatActivity() {
 //
 //    private lateinit var recyclerView: RecyclerView
@@ -65,6 +65,7 @@ import name.ank.lab4.BibEntry
 //    }
 //}
 
+//конечный
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import name.ank.lab4.BibDatabase
 import java.lang.IllegalArgumentException
 
-
+//бесконечный
 //class Adapter(private val entriesNumber: Int, val currentDatabase: BibDatabase) :
 //    RecyclerView.Adapter<ViewHolder<*>>() {
 //
@@ -158,6 +158,7 @@ import name.ank.lab4.Types
 //    }
 //}
 
+//конечный
 class Adapter(private val entriesNumber: Int, val currentDatabase:
 BibDatabase) :
     RecyclerView.Adapter<ViewHolder<*>>() {

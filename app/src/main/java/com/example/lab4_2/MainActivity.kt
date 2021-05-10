@@ -6,27 +6,27 @@ import androidx.recyclerview.widget.RecyclerView
 import name.ank.lab4.BibDatabase
 
 //бесконечный
-//class MainActivity : AppCompatActivity() {
-//
-//    private lateinit var recyclerView: RecyclerView
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//        recyclerView = findViewById(R.id.list)
-//
-//        val currentDatabase = BibDatabase(
-//            this::class.java.getResourceAsStream("/res/raw/publicationsferro.bib")!!.reader()
-//        )
-//
-//        currentDatabase.cfg.strict=true
-//
-//        val entriesNumber = currentDatabase.entries.size
-//
-//        recyclerView.layoutManager = LinearLayoutManager(this)
-//        recyclerView.adapter = Adapter(entriesNumber, currentDatabase)
-//    }
-//}
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var recyclerView: RecyclerView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        recyclerView = findViewById(R.id.list)
+
+        val currentDatabase = BibDatabase(
+            this::class.java.getResourceAsStream("/res/raw/publicationsferro.bib")!!.reader()
+        )
+
+        currentDatabase.cfg.strict=true
+
+        val entriesNumber = currentDatabase.entries.size
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = Adapter(entriesNumber, currentDatabase)
+    }
+}
 
 //import androidx.appcompat.app.AppCompatActivity
 //import android.os.Bundle
@@ -66,18 +66,18 @@ import name.ank.lab4.BibDatabase
 //}
 
 //конечный
-class MainActivity : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        recyclerView = findViewById(R.id.list)
-        val currentDatabase = BibDatabase(
-
-            this::class.java.getResourceAsStream("/res/raw/publicationsferro.bib")!!.reader()
-        )
-        val entriesNumber = currentDatabase.entries.size
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = Adapter(entriesNumber, currentDatabase)
-    }
-}
+//class MainActivity : AppCompatActivity() {
+//    private lateinit var recyclerView: RecyclerView
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_main)
+//        recyclerView = findViewById(R.id.list)
+//        val currentDatabase = BibDatabase(
+//
+//            this::class.java.getResourceAsStream("/res/raw/publicationsferro.bib")!!.reader()
+//        )
+//        val entriesNumber = currentDatabase.entries.size
+//        recyclerView.layoutManager = LinearLayoutManager(this)
+//        recyclerView.adapter = Adapter(entriesNumber, currentDatabase)
+//    }
+//}
